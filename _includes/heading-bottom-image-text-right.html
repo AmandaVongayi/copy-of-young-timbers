@@ -1,0 +1,58 @@
+<style>
+
+    #content-blocks-{{forloop.index0}}{
+        background-color: {{item.colors.background-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} .bg-image{
+        background-image: url('{{item.image}}');
+        padding-bottom: 30rem;
+    }
+    #content-blocks-{{forloop.index0}} p
+    {
+    font-size: 1.2rem;
+    color: {{item.colors.text}};
+    }
+
+
+    #content-blocks-{{forloop.index0}} .heading 
+    {
+        font-size: 3rem;
+        line-height: 0.9;
+        color: {{item.colors.heading}};
+    }
+
+
+    #content-blocks-{{forloop.index0}} a{
+        padding: 1% 2%;
+        display: inline-block;
+        margin: 1%;
+        color: {{item.colors.link-color}};
+        background-color: {{item.colors.link-background-color}};
+        border: 1px solid {{item.colors.link-border-color}};
+    }
+    #content-blocks-{{forloop.index0}} a:hover{
+        color: {{item.colors.link-hover-color}};
+        background-color: {{item.colors.link-hover-background-color}};
+        border: 1px solid {{item.colors.link-hover-border-color}};
+    }
+
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-center padded-sides-sm" id = "{{item.content-block-id}}" style = "min-height: 70vh;">
+        <div class = "bg-image col-4 ">
+
+        </div>
+        <div class = "col-7 padded-sides grid-center">
+            <div class = "col-10-top text-center">
+                {{item.textarea_html}}
+            </div>
+            <div class = "heading text-center col-10-bottom">
+                <h2>{{item.heading}}</h2>
+            </div>
+        </div>
+        
+    </section>
+</section>

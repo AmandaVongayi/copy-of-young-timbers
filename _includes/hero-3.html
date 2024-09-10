@@ -1,0 +1,32 @@
+<style>
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}};
+    }
+    #content-blocks-{{forloop.index0}} .bg-image{
+        background-image: url('{{item.image}}');
+        padding-bottom: 40%;
+        margin-bottom: 1rem;
+    }
+
+    #content-blocks-{{forloop.index0}} h3{
+        
+        font-size: 2.5rem;
+        color: {{item.colors.heading}}
+    }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid padded-sides" id = "{{item.content-block-id}}">
+        <div class = "col-12 grid">
+            <div class = "col-7 bg-image">
+            </div>
+        </div>
+        <div class = "col-12 grid-right">
+            <div class = "col-6-right">
+                <h3>{{item.heading}}</h3>
+            </div>
+        </div>
+
+    </section>
+</section>

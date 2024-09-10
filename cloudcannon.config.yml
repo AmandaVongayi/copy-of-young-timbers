@@ -1,0 +1,629 @@
+paths:
+  uploads: uploads
+  static: ''
+  collections: ''
+  data: _data
+  layouts: _layouts
+  includes: _includes
+collections_config:
+  data:
+    path: _data
+    output: false
+    icon: database
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  pages:
+    path: ''
+    output: true
+    filter: strict
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas: 
+      default: 
+        path: schemas/default.html
+        name: Default Layout
+      services: 
+        path: schemas/services.html 
+        name: Services Layout
+      blog-category:
+        path: schemas/blog-categories.html
+        name: Blog Category Layout
+      blog-post: 
+        path: schemas/posts.html
+        name: Blog Post Layout 
+        
+_inputs:
+  textarea_html:
+    type: auto
+    options:
+      blockquote: true
+      bold: true
+      format: p h1 h2 h3 h4 h5 h6
+      italic: true
+      strike: true
+      underline: true
+      link: true
+      bulletedlist: true
+      numberedlist: true
+      horizontalrule: true
+      styles: /custom-styles.css
+      left: left
+      center: center
+      right: right
+      image: true
+      undo: true
+      redo: true
+    cascade: true
+  content-block-link:
+    type: auto
+    comment: >-
+      If you would like this section to be linked through the navigation, then
+      you'll need to add an ID. The ID can be added in the below box. Your ID is
+      1 word describing the section it is leading to. For example - about. If you don't want this
+      section to link from the navigation, you can simply leave it out.
+    cascade: true
+  insert-script-here:
+    type: auto
+    comment: >-
+      To change the styles here, change them in your email marketing settings
+      then copy and paste the script here again.
+    cascade: true
+  categories:
+    type: multiselect
+    options:
+      allow_create: true
+      empty_type: array
+    cascade: true
+  tags:
+    type: multiselect
+    options:
+      allow_create: true
+      empty_type: array
+    cascade: true
+_select_data:
+  colors:
+    - '#000000'
+    - '#FFFFFF'
+    - '#F2F2F2'
+    - transparent
+_structures: {}
+_editables: {}
+data_config: {}
+timezone: Etc/UTC
+
+
+page_blocks: []
+_array_structures:
+  content-blocks:
+    values:
+      - label: Hero Version 1
+        icon: star
+        value: 
+          _section-type: hero-1 
+          image: images/young-timbers4.jpg
+          heading: Hello, we are Young Timbers
+          textarea_html:  Some short statement here about Young Timbers
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            text: 'white'
+            text-background-color: 'black'
+          content-block-id:
+      - label: Hero Version 2
+        icon: star
+        value: 
+          _section-type: hero-2 
+          heading: Value Proposition that speaks to your services and benefits
+          image: images/young-timbers3.jpg
+          textarea_html: >-
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem culpa ab quod molestias enim odit, doloremque veritatis? Debitis ullam a quisquam dolorum. Similique cupiditate minima quidem veniam quod modi velit.</p> <a href = "#">Learn More</a>
+          content-block-id:
+          colors: 
+            section-background-color: '#f2f2f2'
+            heading: 'white'
+            heading-background: 'black'
+            text: 'black'
+            link-color: black
+            link-background-color: white
+            link-border-color: black
+            link-hover-color: white
+            link-hover-background-color: black
+      - label: Hero Version 3
+        icon: star
+        value: 
+          _section-type: hero-3 
+          image: images/young-timbers6.jpg
+          heading: Client Name
+          content-block-id:
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+      - label: Space
+        icon: 
+        value:
+          _section-type: space-block 
+          background-color: '#000000'
+      - label: Button
+        icon: 
+        value:
+          _section-type: button
+          textarea_html: <a href = "#" class = "text-center">Learn More</a>
+          colors:
+            background-color: 'white'
+            link-color: 'black'
+            link-background-color: 'transparent'
+            link-border-color: 'black'
+            link-hover-color: 'white'
+            link-hover-background-color: 'black'
+            link-hover-border-color: 'black'
+          content-block-id:
+      - label: Image with Text on the Left
+        icon: 
+        value:
+          _section-type: image-text-left 
+          image: images/young-timbers11.jpg
+          content-block-id:
+          textarea_html: >- 
+            <h3>Maybe you...</h3>
+            <h4>Symptom 1</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+            <h4>Symptom 2</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+            <h4>Symptom 3</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+          colors:
+            section-background-color: 'white'
+            text-block-background-color: 'black'
+            heading: 'white'
+            sub-heading: 'white'
+            text: 'white'
+      - label: Image with Text on the Right
+        icon: 
+        value:
+          _section-type: image-text-right 
+          content-block-id:
+          image: images/young-timbers11.jpg
+          textarea_html: >- 
+            <h3>Maybe you...</h3>
+            <h4>Symptom 1</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+            <h4>Symptom 2</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+            <h4>Symptom 3</h4>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+          colors:
+            section-background-color: 'white'
+            text-block-background-color: 'black'
+            heading: 'white'
+            sub-heading: 'white'
+            text: 'white'
+      - label: One Image
+        icon: 
+        value:
+          _section-type: 1-image-grid
+          content-block-id:
+          background_image: images/young-timbers6.jpg
+          colors: 
+            background-color: 'white'
+      - label: Two Images
+        icon: 
+        value:  
+          _section-type: 2-image-grid
+          content-block-id:
+          1-background_image: images/young-timbers2.jpg
+          2-background_image: images/young-timbers7.jpg
+          colors: 
+            background-color: 
+      - label: Four Images
+        icon: 
+        value:  
+          _section-type: 4-image-grid-plain
+          content-block-id:
+          1-background_image: images/young-timbers1.jpg
+          2-background_image: images/young-timbers2.jpg
+          3-background_image: images/young-timbers3.jpg
+          4-background_image: images/young-timbers4.jpg
+          colors: 
+            background-color: 'white'
+      - label: Fancy Four Images
+        icon: 
+        value: 
+          _section-type: 4-image-grid-fancy
+          content-block-id:
+          image-1: 
+            image: images/young-timbers1.jpg
+            link: 
+            cta: Learn More
+          image-2: 
+            image: images/young-timbers2.jpg
+            link: 
+            cta: Learn More
+          image-3: 
+            image: images/young-timbers3.jpg
+            link: 
+            cta: Learn More
+          image-4: 
+            image: images/young-timbers4.jpg
+            link: 
+            cta: Learn More
+          colors: 
+            section-background-color: 'white'
+            image-overlay: 'rgba(238, 232, 232, 0.3)'
+            link-color: 'black'
+            link-background-color: 'white'
+            link-border-color: 'black'
+            link-hover-color: 'white'
+            link-hover-background-color: 'black'
+      - label: Text Grid 
+        icon: 
+        value: 
+          _section-type: 4-grid-text
+          content-block-id:
+          headings: 
+            heading-1: Our <br> Vision 
+            heading-2: Our <br> Mission 
+          texts:
+            block-1:
+              textarea_html: >-
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                  necessitatibus consectetur ad, beatae voluptates dicta natus tempora
+                  voluptatibus deleniti ea impedit ipsa pariatur amet mollitia doloremque
+                  autem earum. Accusamus, id!
+            block-2:
+              textarea_html: >-
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                  necessitatibus consectetur ad, beatae voluptates dicta natus tempora
+                  voluptatibus deleniti ea impedit ipsa pariatur amet mollitia doloremque
+                  autem earum. Accusamus, id!
+          colors:
+            background-color: 'white'
+            heading: 'black'
+            text: 'black'
+      - label: Text Grid with Images
+        icon: 
+        value: 
+          _section-type: 4-image-text-grid 
+          content-block-id:
+          top-section:
+            textarea_html: >-
+              <h3>Maybe you...</h3>
+              <h4>Symptom 1</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+              <h4>Symptom 2</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+              <h4>Symptom 3</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+          bottom-section:
+            textarea_html: >-
+              <h3>Maybe you...</h3>
+              <h4>Symptom 1</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+              <h4>Symptom 2</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+              <h4>Symptom 3</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatibus. Ratione voluptates earum expedita magni explicabo, impedit nesciunt consequuntur tenetur ipsum error consectetur commodi velit iusto rem consequatur neque corrupti.</p>
+          1_image: images/young-timbers8.jpg
+          2_image: images/young-timbers9.jpg
+          colors:
+              section-background-color: 'white'
+              text-background-color: 'black'
+              heading: 'white'
+              sub-heading: 'white'
+              text: 'black'
+              link-color: 'black'
+              link-background-color: 'white'
+              link-border-color: 'black'
+              link-hover-color: 'white'
+              link-hover-background-color: 'black'
+      - label: Accordion on the Left
+        icon: 
+        value: 
+          _section-type: accordion-left
+          content-block-id:
+          accordion:
+            - heading: Title 1
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 2
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 3
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+          colors:
+            background-color: '#f2f2f2'
+            accordion-border: 'black'
+            accordion-heading: 'black'
+            accordion-content: 'black'
+            icon-color: 'black'
+      - label: Accordion on the Right
+        icon: 
+        value: 
+          _section-type: accordion-right
+          content-block-id:
+          accordion:
+            - heading: Title 1
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 2
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 3
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+          colors:
+            background-color: '#f2f2f2'
+            accordion-border: 'black'
+            accordion-heading: 'black'
+            accordion-content: 'black'
+            icon-color: 'black'
+      - label: Accordion on the left with Image
+        icon: 
+        value: 
+          _section-type: accordion-left-image-right
+          content-block-id:
+          background_image: images/young-timbers1.jpg
+          accordion:
+            - heading: Title 1
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 2
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+            - heading: Title 3
+              content: 
+                textarea_html: >- 
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo voluptate tenetur animi veritatis impedit eligendi, quisquam sint ad repellat. Vel molestiae delectus, quibusdam tempora quo aliquid eius dolorem a!
+          colors:
+            background-color: '#f2f2f2'
+            accordion-border: 'black'
+            accordion-heading: 'black'
+            accordion-content: 'black'
+            icon-color: 'black'
+      - label: Image and Text Fancy
+        icon: 
+        value: 
+          _section-type: heading-bottom-image-text 
+          content-block-id:
+          heading: Our <br> Approach 
+          textarea_html: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis alias quidem cupiditate qui deserunt fugit at praesentium, quaerat eos sit. Quo aperiam fugit voluptatem cumque aut est quia velit quod? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio iure autem a quibusdam, aliquam molestias dolore, veritatis sit rem cum corrupti eos quasi porro quos sapiente suscipit earum repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quo necessitatibus repellat asperiores voluptatum, optio maiores culpa illum dicta unde quos, minus nisi delectus praesentium qui? Doloribus recusandae suscipit harum!</p>
+          image: images/young-timbers8.jpg
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            text: 'black'
+            link-color: 'black'
+            link-background-color: 'white'
+            link-border-color: 'black'
+            link-hover-color: 'white'
+            link-hover-background-color: 'black'
+      - label: Image and Text Fancy on the Right
+        icon: 
+        value: 
+          _section-type: heading-bottom-image-text-right
+          content-block-id:
+          heading: Our <br> Approach 
+          textarea_html: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis alias quidem cupiditate qui deserunt fugit at praesentium, quaerat eos sit. Quo aperiam fugit voluptatem cumque aut est quia velit quod? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio iure autem a quibusdam, aliquam molestias dolore, veritatis sit rem cum corrupti eos quasi porro quos sapiente suscipit earum repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quo necessitatibus repellat asperiores voluptatum, optio maiores culpa illum dicta unde quos, minus nisi delectus praesentium qui? Doloribus recusandae suscipit harum!</p>
+          image: images/young-timbers8.jpg
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            text: 'black'
+            link-color: 'black'
+            link-background-color: 'white'
+            link-border-color: 'black'
+            link-hover-color: 'white'
+            link-hover-background-color: 'black'
+      - label: List 
+        icon: 
+        value: 
+          _section-type: list 
+          content-block-id:
+          heading: Clients 
+          list: 
+            - section-1: '2023' 
+              section-2: Client Name 
+              section-3: Service Name 
+              link: 
+            - section-1: '2023 '
+              section-2: Client Name 
+              section-3: Service Name 
+              link: 
+            - section-1: '2023' 
+              section-2: Client Name 
+              section-3: Service Name 
+              link: 
+          colors:   
+            background-color: 'white'
+            heading: 'black'
+            text: 'black'
+            hover-color: '#777777'
+      - label: Numbers 
+        icon: 
+        value: 
+          _section-type: numbers 
+          content-block-id:
+          heading: Who we are in numbers
+          metric: 
+            one: Metric 1
+            two: Metric 2
+            three: Metric 3
+          number:
+            one: '205' 
+            two: '109' 
+            three: '10'
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            metric: 'black'
+            number: 'black'
+      - label: Testimonials 
+        icon: 
+        value:
+          _section-type: testimonials-scroll 
+          content-block-id:
+          heading: Client <br> Feedback
+          testimonial: 
+            - client-name: adelia
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Content Travellers
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Rare Rabbit
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Ascentage
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Moda
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Motsoneng
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+            - client-name: Sol
+              textarea_html: <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero soluta earum corrupti aliquam commodi natus culpa recusandae possimus dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum explicabo enim.</p> 
+          logo: 
+            - image: images/client-logo/client-adelia.jpg
+            - image: images/client-logo/client-content-travelers.png
+            - image: images/client-logo/client-rare-rabbit.jpg
+            - image: images/client-logo/client-ascentage.jpg 
+            - image: images/client-logo/client-moda.png
+            - image: images/client-logo/client-motsoeneng.jpg 
+            - image: images/client-logo/client-sol.jpg
+          colors: 
+            section-background-color: 'white'
+            testimonial-background-color: 'black'
+            heading-color: 'black'
+            client-name: 'white'
+            text: 'white'
+            link-color: 'white'
+            link-background-color: 'transparent'
+            link-border-color: 'white'
+            link-hover-color: 'black'
+            link-hover-background-color: 'white'
+            link-hover-border-color: 'white'
+      - label: Single Testimonial 
+        icon: 
+        value:
+          _section-type: testimonial-single
+          content-block-id:
+          testimonial:
+            client-name: adelia
+            textarea_html: >-
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
+              soluta earum corrupti aliquam commodi natus culpa recusandae possimus
+              dolor omnis? Impedit animi incidunt eum vel voluptates, ab harum
+              explicabo enim.</p>
+          logo:
+            image: /images/client-logo/client-adelia.jpg
+          colors:
+            section-background-color: white
+            testimonial-background-color: black
+            heading-color: black
+            client-name: white
+            text: white
+            link-color: white
+            link-background-color: transparent
+            link-border-color: white
+            link-hover-color: black
+            link-hover-background-color: white
+            link-hover-border-color: white
+      - label: Text Block 
+        icon: 
+        value:
+          _section-type: text-block 
+          content-block-id:
+          textarea_html: >- 
+            <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque libero eos nulla beatae hic velit maxime pariatur debitis dolor cumque porro adipisci corrupti, illum reiciendis placeat! Sit voluptas sed nulla?</p>
+          colors: 
+            background-color: 'white'
+            heading-color: 'black'
+            subheading: 'black'
+            text-color: 'black'
+            link-color: 'black'
+            link-background-color: 'transparent'
+            link-border-color: 'black'
+            link-hover-color: 'white'
+            link-hover-background-color: 'black'
+            link-hover-border-color: 'black'
+      - label: Columns in the Center
+        icon: 
+        value: 
+          _section-type: columns-center 
+          content-block-id:
+          heading: How to work with us
+          column:
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            column-heading: 'black'
+            text: 'black'
+      - label: Columns on the Left 
+        icon: 
+        value: 
+          _section-type: columns-left 
+          content-block-id:
+          heading: How to work with us
+          column:
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            column-heading: 'black'
+            text: 'black'
+      - label: Column on the Right
+        icon: 
+        value:
+          _section-type: columns-right 
+          content-block-id:
+          heading: How to work with us
+          column:
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+            - column-heading: Step 1
+              textarea_html: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit sint, officia adipisci dolores, unde quasi laboriosam eius dolore voluptatem aspernatur sit nesciunt maiores modi repudiandae expedita vel possimus quam dolorum.
+          colors: 
+            background-color: 'white'
+            heading: 'black'
+            column-heading: 'black'
+            text: 'black'
+      - label: Large Heading
+        icon: 
+        value:
+          _section-type: heading
+          textarea_html: 
+          colors: 
+            background-color: 'white'
+            heading-color: 'black'

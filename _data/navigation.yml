@@ -1,0 +1,50 @@
+header-navigation:
+  logo: /images/logo.png
+  image: /images/young-timbers3.jpg
+  menu:
+    heading: Menu
+    links:
+      column-1:
+        textarea_html: >-
+          <p><a href="/">Home</a><a href="/about">About</a><a
+          href="/services/digital-marketing">Services</a>&nbsp;</p>
+      column-2:
+        textarea_html: >-
+          <p><a href="/blog-categories/blogs">Blogs</a><a
+          href="/careers">Careers</a><a href="/contact">Contact</a></p>
+  featured:
+    heading: Featured Blogs
+    links:
+      textarea_html: <p>Coming Soon</p>
+social-links:
+  links:
+    email: info@young-timbers.co.za
+    instagram: https://www.instagram.com/youngtimber.s/
+    whatsapp: https://wa.me/+27639464108
+footer-navigation:
+  logo: /images/logo.png
+  form:
+    heading: Request a Call
+    field-1: Name
+    field-2: Email
+    field-3: Number
+    field-4: Tell us about your business
+    field-5: Select a Service
+    options:
+      option-1: Digital Marketing
+      option-2: Strategic Branding
+      option-3: Business Transformation
+    button: Submit
+blogs:
+  blog-navigation:
+    textarea_html: >-
+      <p><a href="/blog-categories/all-blogs.html">all blogs</a><a
+      href="/blog-categories/category-1.html">Category 1</a><a
+      href="/blog-categories/category-2.html">Category 2</a> <a
+      href="/blog-categories/category-3.html">Category 3 </a><a
+      href="/blog-categories/category-4.html">Category 4 </a></p>
+    colors:
+      heading-underline: darkgrey
+      navigation-links-color: black
+      navigation-underline-color: darkgrey
+      hover-overlay-color: rgba(0, 0, 0, 0.5)

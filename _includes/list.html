@@ -1,0 +1,52 @@
+<style>
+    #content-blocks-{{forloop.index0}} hr{
+        
+        margin-top: -1%;
+        margin-left: 1.5%;
+        width: 97%;
+        border: 0.5px solid {{item.colors.text}};
+    }
+
+    #content-blocks-{{forloop.index0}} h3{
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: {{item.colors.heading}}
+    }
+
+    #content-blocks-{{forloop.index0}} p{
+        
+        text-transform: capitalize;
+        font-weight: 400;
+        color: {{item.colors.text}};
+    }
+
+    #content-blocks-{{forloop.index0}} a:hover p{
+        color: {{item.colors.hover-color}};
+    }
+
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "padded-sides-sm" id = "{{item.content-block-id}}">
+        <h3 class = "text-center">
+            {{item.heading}}
+        </h3>
+
+        <div class = "grid-right">
+            <div class = "col-9-right">
+                {% for list in item.list %}
+                    <a class = "grid padded-xsm" href = "{{list.link}}">
+                        <div class = "col-2"><p>{{list.section-1}}</p></div>
+                        <div class = "col-5"><p>{{list.section-2}}</p></div>
+                        <div class = "col-5 text-right"><p>{{list.section-3}}</p></div>
+                    </a>
+                    <hr>
+                {% endfor %}
+
+            </div>
+        </div>
+        
+    </section>
+</section>

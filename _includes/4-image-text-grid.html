@@ -1,0 +1,106 @@
+<style>
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.section-background-color}};
+    }
+    #content-blocks-{{forloop.index0}} .image-1{
+        background-image: url('{{item.1_image}}');
+        margin-left: 2%;
+    }
+
+    #content-blocks-{{forloop.index0}} .image-2{
+        background-image: url('{{item.2_image}}');
+        margin-right: 2%;
+    }
+
+    #content-blocks-{{forloop.index0}} .text-block{
+        background-color: {{item.colors.text-background-color}};
+        color: white;
+    }
+
+    #content-blocks-{{forloop.index0}} h3{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2.5rem;
+        color: {{item.colors.heading}};
+    }
+
+    #content-blocks-{{forloop.index0}} h4{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.8rem;
+        color: {{item.colors.sub-heading}};
+    }
+
+    #content-blocks-{{forloop.index0}} hr{
+        border: 0.5px solid {{item.colors.sub-heading}};
+        margin-top: -1rem;
+        width: 4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #content-blocks-{{forloop.index0}} a{
+        padding: 1% 2%;
+        display: inline-block;
+        margin: 1%;
+        color: {{item.colors.link-color}};
+        background-color: {{item.colors.link-background-color}};
+        border: 1px solid {{item.colors.link-border-color}};;
+    }
+    #content-blocks-{{forloop.index0}} a:hover{
+        color: {{item.colors.link-hover-color}};;
+        background-color: {{item.colors.link-hover-background-color}};;
+    }
+
+    #content-blocks-{{forloop.index0}} .bottom-div{
+        margin-top: 2%;
+    }
+
+    @media(max-width: 768px){
+        #content-blocks-{{forloop.index0}} .bg-image{
+            padding-bottom: 20rem;
+        }
+
+        #content-blocks-{{forloop.index0}} .image-1{
+        margin-left: 0%;}
+
+    #content-blocks-{{forloop.index0}} .image-2{
+        margin-right: 0%;}
+
+        
+    }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-center padded-sides" id = "{{item.content-block-id}}">
+<!-- Top -->
+        <div class = "col-12 grid-center">
+            <section class = "col-6_sm-12 text-block padded-sm">
+                {{item.top-section.textarea_html}}
+            </section>
+            <section class = "col-5_sm-12 bg-image image-1"></section>
+
+            
+        </div>
+
+
+        
+
+        <!-- Bottom -->
+
+        <div class = "col-12 grid-center bottom-div">
+
+            <section class = "col-5_sm-12 bg-image image-2"></section>
+            <section class = "col-6_sm-12 text-block padded-sm">
+                {{item.bottom-section.textarea_html}}
+            </section>
+        </div>
+        
+        
+        
+
+
+        
+    </section>
+
+</section>

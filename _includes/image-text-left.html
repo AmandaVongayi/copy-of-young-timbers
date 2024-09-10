@@ -1,0 +1,175 @@
+<style>
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.section-background-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} .bg-image{
+        background-image: url('{{item.image}}');
+        margin-left: 2%;
+        padding-bottom: 30rem;
+    }
+
+    #content-blocks-{{forloop.index0}} .text-block{
+        background-color: {{item.colors.text-block-background-color}};
+        
+    }
+
+    #content-blocks-{{forloop.index0}} p,
+    #content-blocks-{{forloop.index0}} li,
+    #content-blocks-{{forloop.index0}} a{
+        font-size: 1rem;
+        color: {{item.colors.text}};
+    }
+
+    #content-blocks-{{forloop.index0}} a{
+        transition: 0.7s all;
+    }
+    #content-blocks-{{forloop.index0}} a:hover{
+        border-bottom: 1px solid {{item.colors.text}};
+    }
+
+    #content-blocks-{{forloop.index0}} ul{
+        padding-left: 5%;
+    }
+
+    #content-blocks-{{forloop.index0}} li:last-child{
+        margin-bottom: 5%;
+    }
+
+
+
+    #content-blocks-{{forloop.index0}} h3{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: {{item.colors.heading}};
+    }
+
+    #content-blocks-{{forloop.index0}} h4{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: {{item.colors.sub-heading}};
+    }
+
+    #content-blocks-{{forloop.index0}} hr{
+        
+        margin-top: -1rem;
+        width: 4rem;
+        margin-bottom: 0.5rem;
+        border: 0.5px solid {{item.colors.sub-heading}};
+    }
+
+
+
+  /* Mobile Styles */
+
+  .xs-mob-show, .mob-show, .tabelet-show, .large-show{
+  display: none; 
+}
+
+  @media(min-width:1920px){
+  .large-hide { display: none; }
+  .large-show { display: block; }
+
+  }
+
+  /* -md */
+  @media(max-width: 1024px){
+
+
+  }
+
+  @media(max-width: 990px){
+
+
+
+  }
+
+  @media(max-width: 850px){
+
+
+
+  }
+
+  /* -sm */
+  @media(max-width: 768px){
+  .tablet-hide { display: none; }
+  .tablet-show { display: block; }
+
+  #content-blocks-{{forloop.index0}} h3{
+        font-size: 2rem;
+    }
+
+    #content-blocks-{{forloop.index0}} .bg-image{
+        margin-left: 0%;
+        padding-bottom: 35rem;
+    }
+
+  }
+
+  @media(max-width: 660px){
+
+
+  }
+
+  /* -xs */
+  @media(max-width:576px){
+  .mob-hide { display: none; }
+  .mob-show { display: block; }
+
+  #content-blocks-{{forloop.index0}} .bg-image{
+
+        margin-left: 0%;
+
+    }
+
+    #content-blocks-{{forloop.index0}} .container {
+        display: flex;
+        flex-direction: column;
+        }
+
+    #content-blocks-{{forloop.index0}} .container {
+    flex-direction: column-reverse;
+  }
+
+    #content-blocks-{{forloop.index0}}  .box1 {
+    order: 2;
+  }
+
+  #content-blocks-{{forloop.index0}}  .box2 {
+    order: 1;
+  }
+
+  
+  }
+
+
+  @media(max-width: 450px){
+  .xs-mob-hide { display: none; }
+  .xs-mob-show { display: block; }
+  
+  
+  }
+
+  @media(max-width: 400px){
+
+
+  }
+
+  @media(max-width: 350px){
+
+
+  }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-center padded-sides container" id = "{{item.content-block-id}}">
+        <section class = "col-6_sm-12_xs-12 box-1 text-block padded-sm">
+            {{item.textarea_html}}
+        </section>
+        <section class = "col-5_sm-12_xs-12 box-2 bg-image">
+        </section>
+    </section>
+</section>

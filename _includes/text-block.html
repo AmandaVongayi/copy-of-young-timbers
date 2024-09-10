@@ -1,0 +1,74 @@
+<style>
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} p
+    {
+        font-size: 1rem;
+        line-height: 1.1;
+    color: {{item.colors.text-color}};
+    }
+
+        
+    #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 2.5rem;
+        color: {{item.colors.heading-color}};
+        }
+
+    #content-blocks-{{forloop.index0}} h2 
+        {
+        font-size: 2rem;
+        color: {{item.colors.subheading-color}};
+        }
+
+    #content-blocks-{{forloop.index0}} h3 
+        {
+        font-size: 1.5rem;
+        color: {{item.colors.subheading-color}};
+        }
+
+    #content-blocks-{{forloop.index0}} h4 
+        {
+        font-size: 1rem;
+        color: {{item.colors.subheading-color}};
+        }
+
+    #content-blocks-{{forloop.index0}} h5 
+        {
+        font-size: 1rem;
+        color: {{item.colors.subheading-color}};
+        }
+
+    #content-blocks-{{forloop.index0}} h6 
+        {
+        font-size: 1rem;
+        color: {{item.colors.subheading-color}};
+        }
+
+
+
+
+        #content-blocks-{{forloop.index0}} a{
+        padding: 1% 2%;
+        display: inline-block;
+        margin: 1%;
+        color: {{item.colors.link-color}};
+        background-color: {{item.colors.link-background-color}};
+        border: 1px solid {{item.colors.link-border-color}};
+        }
+        #content-blocks-{{forloop.index0}} a:hover{
+            color: {{item.colors.link-hover-color}};
+            background-color: {{item.colors.link-hover-background-color}};
+            border: 1px solid {{item.colors.link-hover-border-color}};
+        }
+
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "padded-sides-lg" id = "{{item.content-block-id}}">
+        {{item.textarea_html}}
+    </section>
+</section>

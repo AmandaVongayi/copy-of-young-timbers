@@ -1,0 +1,57 @@
+<style>
+
+    #content-blocks-{{forloop.index0}}{
+        background-color: {{item.colors.background-color}}
+    }
+ 
+    #content-blocks-{{forloop.index0}} .column{
+        border-right: 0.9px solid {{item.colors.border-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} .column:last-child{
+        border-right: none;
+    }
+
+    #content-blocks-{{forloop.index0}} h3{
+        color: {{item.colors.heading}};
+        font-size: 2rem;
+        padding-left: 3%;
+        margin-bottom: 1rem;
+    }
+    #content-blocks-{{forloop.index0}} h5{
+        color: {{item.colors.column-heading}};
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    #content-blocks-{{forloop.index0}} hr{
+        
+        width: 25%;
+        margin-top: -6%;
+        margin-bottom: 8%;
+        border: 0.9px solid {{item.colors.border-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} p{
+        color: {{item.colors.text}};
+    }
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid padded-sides" id = "{{item.content-block-id}}">
+        <section class = "col-10">
+            <h3>{{item.heading}}</h3>
+            <div class = "grid">
+                {% for column in item.column limit: 4 %}
+                <div class = "col-3 column padded-xsm">
+                    <h5>{{column.column-heading}}</h5>
+                    <hr>
+                    <p>{{column.textarea_html}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+        
+    </section>
+</section>

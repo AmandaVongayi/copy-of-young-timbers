@@ -1,0 +1,61 @@
+<style>
+    #content-blocks-{{forloop.index0}}{
+        background-color: {{item.colors.background-color}};
+    }
+    #content-blocks-{{forloop.index0}} h3{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: {{item.colors.heading}};
+    }
+    #content-blocks-{{forloop.index0}} h5{
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        color: {{item.colors.metric}};
+    }
+
+    #content-blocks-{{forloop.index0}} hr{
+        
+        margin-top: -5%;
+        width: 20%;
+        margin-bottom: 0.8rem;
+        border: 0.7px solid {{item.colors.metric}};
+    }
+
+    #content-blocks-{{forloop.index0}} p{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 500;
+        color: {{item.colors.number}};
+    }
+
+
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "" id = "{{item.content-block-id}}">
+        <h3 class = "text-center">{{item.heading}}</h3>
+        <div class = "grid-center">
+            <div class="grid-center text-left col-9">
+                <div class="col-4">
+                    <h5>{{item.metric.one}}</h5>
+                    <hr>
+                    <p class="count" data-target-number="{{item.number.one}}">{{item.number.one}}</p>
+                </div>
+                <div class="col-4">
+                    <h5>{{item.metric.two}}</h5>
+                    <hr>
+                    <p class="count" data-target-number="{{item.number.two}}">{{item.number.two}}</p>
+                </div>
+                <div class="col-4">
+                    <h5>{{item.metric.three}}</h5>
+                    <hr>
+                    <p class="count" data-target-number="{{item.number.three}}">{{item.number.three}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</section>

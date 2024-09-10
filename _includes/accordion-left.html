@@ -1,0 +1,171 @@
+<style>
+
+        #content-blocks-{{forloop.index0}} {
+                    background-color: {{item.colors.background-color}}
+                }
+        /* Hide content by default */
+        #content-blocks-{{forloop.index0}} .accordion-content {
+            display: none;
+            color: {{item.colors.accordion-content}}
+        }
+
+        /* Style for the active (expanded) content */
+        #content-blocks-{{forloop.index0}} .accordion-item.active .accordion-content {
+            display: block;
+            padding: 2%;
+        }
+
+        #content-blocks-{{forloop.index0}} .accordion-item {
+            align-items: center;
+            border-top: 1px solid {{item.colors.accordion-border}};
+            margin-bottom: 0.3rem;
+            padding: 2%; /* Adjust padding as needed */
+        }
+
+        #content-blocks-{{forloop.index0}} .title-text {
+            flex: 1; /* Allow the title to take up remaining space */
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: {{item.colors.accordion-heading}}
+        }
+
+        #content-blocks-{{forloop.index0}} .icon-circle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem; /* Circle size */
+            height: 2rem; /* Circle size */
+            border-radius: 50%;
+            border: 1px solid {{item.colors.icon}};
+            margin-left: 20%; /* Adjust margin between icon and title */
+            line-height: 1; /* Fix line height */
+            font-size: 3rem; /* Icon font size */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+        }
+
+        #content-blocks-{{forloop.index0}} .icon-plus {
+            display: inline-block;  /* Initially hide the + icon */
+            color: {{item.colors.icon}};
+        }
+
+        #content-blocks-{{forloop.index0}} .icon-minus {
+            display: none;
+            color: {{item.colors.icon}};
+        }
+
+        #content-blocks-{{forloop.index0}} .icon-minus {
+            position: absolute;
+            left: 0.4rem;
+            top: -0.85rem;
+
+        }
+
+        #content-blocks-{{forloop.index0}} .icon-plus,
+        #content-blocks-{{forloop.index0}} .icon-minus {
+            transition: all 0.7s; /* Transition duration */
+
+        }
+
+        /* Mobile Styles */
+
+    .xs-mob-show, .mob-show, .tabelet-show, .large-show{
+      display: none; 
+    }
+  
+      @media(min-width:1920px){
+      .large-hide { display: none; }
+      .large-show { display: block; }
+  
+      }
+  
+      /* -md */
+      @media(max-width: 1024px){
+  
+  
+      }
+  
+      @media(max-width: 990px){
+
+  
+  
+      }
+  
+      @media(max-width: 850px){
+
+  
+  
+      }
+  
+      /* -sm */
+      @media(max-width: 768px){
+      .tablet-hide { display: none; }
+      .tablet-show { display: block; }
+  
+      }
+  
+      @media(max-width: 660px){
+  
+  
+      }
+  
+      /* -xs */
+      @media(max-width:576px){
+      .mob-hide { display: none; }
+      .mob-show { display: block; }
+
+        #content-blocks-{{forloop.index0}} .title-text {
+                font-size: 1rem;
+            }
+      
+      }
+  
+  
+      @media(max-width: 450px){
+      .xs-mob-hide { display: none; }
+      .xs-mob-show { display: block; }
+      
+      
+      }
+  
+      @media(max-width: 400px){
+  
+  
+      }
+  
+      @media(max-width: 350px){
+  
+  
+      }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-left padded-sides" id = "{{item.content-block-id}}">
+
+        <div class="accordion col-10-left_sm-12">
+            {% for accordion in item.accordion %}
+            <div class="accordion-item">
+                <div class="accordion-title grid-middle">
+                    <div class="col-11">
+                        <h2 class="title-text">{{accordion.heading}}</h2>
+                    </div>
+                    <div class="icon-container col-1 text-right">
+                        <span class="icon-circle">
+                            <span class="icon-plus">+</span>
+                            <span class="icon-minus">-</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <p>{{accordion.content.textarea_html}}</p>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+        
+    </section>
+</section>

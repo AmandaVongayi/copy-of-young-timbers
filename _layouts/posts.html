@@ -1,0 +1,88 @@
+--- 
+layout: default 
+--- 
+
+<style>
+
+    .blog-image{
+        padding-bottom: 35rem;
+    }
+
+    .social-share
+  {
+  position: fixed;
+  left: 2rem;
+  top: 35vh;
+  z-index: 2;
+  text-align: center;
+  }
+
+.social-share h4
+  {
+  transform: rotate(270deg);
+  position: relative;
+  top: 1.8rem;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  }
+
+.social-share a{
+    color: black;
+}
+
+
+
+.post-details h4{
+    font-size: 1.4rem;
+}
+
+.post-details h3{
+    font-size: 2.5rem;
+    padding: 0% 10%;
+}
+
+.post-details h6{
+    font-size: 1.4rem;
+    /* font-weight: 300; */
+}
+</style>
+
+<section class = "text-center padded-sides-xlg post-details margin-b-2">
+    <h4>{{page.date | date: "%B %d, %Y"}}</h4>
+    <h3>{{page.title}}</h3>
+    <h6>{{page.author}}</h6>
+    <div class = "padded-sides-lg">
+        <div class = "bg-image blog-image" style = "background-image: url('{{page.blog_image}}');"></div>
+    </div>
+    
+</section>
+
+<div class="social-share mob-hide padded-l-2">
+  
+    <nav class="social-share-icons-color">
+      <p class="">
+        <a href="https://twitter.com/intent/tweet?{{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </p>
+      <p>
+      <a href="https://facebook.com/sharer.php?u={{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      </p>
+      <p>
+        <a href="http://pinterest.com/pin/create/link/?{{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+      </a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+      </a>
+      </p>
+  </nav>
+
+  <h4 class="social-share-text"> Share </h4>
+</div>

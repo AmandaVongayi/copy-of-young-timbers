@@ -1,0 +1,146 @@
+---
+layout: default
+--- 
+
+<style>
+
+    .services-navigation{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .services-navigation{
+    text-align: center;
+  }
+
+    .services-navigation hr{
+        border: 1px solid black ;
+        /* margin-bottom: 1rem; */
+        width: 30%;
+        transition: width 0.7s; 
+    }
+    .services-navigation a{
+        margin: 1% ;
+        padding: 0.5% 1%;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        color: black;
+
+    }
+
+    .service-layout-heading{
+        font-size: 3rem;
+        line-height: 0.9;
+        font-weight: 700;
+        padding: 2% 20%;
+    }
+
+    /* Mobile Styles */
+
+.xs-mob-show, .mob-show, .tabelet-show, .large-show{
+  display: none; 
+}
+
+  @media(min-width:1920px){
+  .large-hide { display: none; }
+  .large-show { display: block; }
+
+  }
+
+  /* -md */
+  @media(max-width: 1024px){
+
+
+  }
+
+  @media(max-width: 990px){
+
+    .service-layout-heading{
+        font-size: 2rem;
+        padding: 2% 15%;
+    }
+
+
+
+  }
+
+  @media(max-width: 850px){
+
+
+
+  }
+
+  /* -sm */
+  @media(max-width: 768px){
+  .tablet-hide { display: none; }
+  .tablet-show { display: block; }
+
+  }
+
+  @media(max-width: 660px){
+
+    .service-layout-heading{
+        padding: 2% 10%;
+    }
+
+
+  }
+
+  /* -xs */
+  @media(max-width:576px){
+  .mob-hide { display: none; }
+  .mob-show { display: block; }
+
+  .services-navigation{
+    text-align: left;
+  }
+
+  
+  }
+
+
+  @media(max-width: 450px){
+  .xs-mob-hide { display: none; }
+  .xs-mob-show { display: block; }
+
+  .service-layout-heading{
+        font-size: 1.5rem;
+    }
+  
+  
+  }
+
+  @media(max-width: 400px){
+
+
+  }
+
+  @media(max-width: 350px){
+
+
+  }
+
+</style>
+
+<section class = "text-center service-layout">
+    <div class = "service-layout-heading">
+        <h3>{{page.heading}}</h3>
+    </div>
+    
+    <nav class = "grid-center_xs-left  services-navigation padded-sides-sm">
+        <a href = "/services/digital-marketing.html">
+            <span>Digital Marketing</span>
+            <hr>
+        </a>
+        <a href = "/services/strategic-branding.html" >
+            <span>Strategic Branding</span>
+            <hr>
+        </a>
+        <a href = "/services/business-transformation.html" id  = "service-3">
+            <span>Business Transformation</span>
+            <hr>
+        </a>
+    </nav>
+</section>
+
+{{content}}

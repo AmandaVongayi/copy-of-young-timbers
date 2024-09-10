@@ -1,0 +1,25 @@
+<style>
+    #content-blocks-{{forloop.index0}}{
+        background-color: {{item.colors.background-color}};
+    }
+    #content-blocks-{{forloop.index0}} a{
+        padding: 1% 2%;
+        display: inline-block;
+        margin: 1%;
+        color: {{item.colors.link-color}};
+        background-color: {{item.colors.link-background-color}};
+        border: 1px solid {{item.colors.link-border-color}};
+    }
+    #content-blocks-{{forloop.index0}} a:hover{
+        color: {{item.colors.link-hover-color}};
+        background-color: {{item.colors.link-hover-background-color}};
+        border: 1px solid {{item.colors.link-hover-border-color}};
+    }
+
+</style>
+
+<section class = "padded-sides" id="content-blocks-{{forloop.index0}}">
+    <section class = "text-center " id = "{{item.content-block-id}}">
+        {{item.textarea_html}}
+    </section>
+</section>

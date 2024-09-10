@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="utf-8" />
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Meta data for SEO purposes. -->
+    <title> {{page.seo.title}} </title>
+
+    <meta name="description" content="{{page.seo.description}}" />
+    <meta name="keywords" content="{{page.seo.keywords}}" />
+
+    <!-- meta data to tell the browser that your devide is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!--  Social media sharing META Tags -->
+    <meta property="og:title" content="{{page.seo.title}}"/>
+    <meta property="og:description" content="{{page.seo.description}}"/>
+    <meta property="og:image" content="{{ page.seo.social-share_image }}" />
+    <meta property="og:url" content="{{page.seo.url}}" />
+    <meta name="og:site_name" content="{{page.seo.title}}" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="{{page.seo.description}}" />
+    <meta name="twitter:description" content="{{page.seo.description}}" />
+    <meta name="twitter:title" content="{{page.seo.title}}" />
+    <meta name="twitter:site" content="{{page.seo.url}}" />
+    <meta name="twitter:creator" content="{{page.seo.social-alt}}" />
+    <meta name="twitter:image:alt" content="{{ page.seo.social-share_image }}" />
+
+    <!-- link to browser icon tag -->
+    <link rel="icon" href="{{site.data.general.basics.browser-tag_image}}" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{site.data.general.basics.browser-tag_image}}" />
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{{site.data.general.basics.browser-tag_image}}" />
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="{{site.data.general.basics.browser-tag_image}}" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- Google Icon -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- iconify icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0379688db4.js" crossorigin="anonymous"></script>
+
+    <!-- Gridlex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css" />
+
+    <!-- fanceybox gallery -->
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="/slick/slick.css" />
+    <link rel="stylesheet" href="/slick/slick-theme.css" />
+
+    {{site.data.head.first-script-to-go-in-the-head}}
+    {{site.data.head.second-script-to-go-in-the-head}}
+    {{site.data.head.thrid-script-to-go-in-the-head}}
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <style>
+
+        header{ 
+            position: sticky;
+            width: 100%;
+            z-index: 100;
+            background-color: white;
+            top: 0;
+            margin-bottom: 3rem;
+        }
+
+        
+
+        /* Temporary */
+
+        .logo img{
+            width: 100%;
+            margin-top: 3%;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            /* position: relative;
+            z-index: 101; */
+            font-weight: lighter;
+            font-style: normal;
+            font-size: 42px;
+            line-height: 1;
+            margin-right: 10%;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+                
+
+        header{
+            padding: 1%;
+        }
+       
+
+        /* Footer */
+
+        footer .logo{
+            text-align: center;
+        }
+        footer .logo img{
+            width: 80%;
+        }
+
+        footer h2{
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        footer form input, 
+        footer form textarea,
+        footer form select{
+            background-color: transparent;
+            border: none;
+            width: 80%;
+            height: 2.5rem;
+            border-bottom: 1px solid black;
+            text-transform: uppercase;
+            color: black;
+            font-size: 1.2rem;
+            padding: 0.2%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer form input::placeholder,
+        footer form textarea::placeholder {
+            color: black;
+            font-size: 1.2rem;
+            padding: 0.2%;
+            border:none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer form textarea::placeholder {
+            /* Define placeholder styles */
+            padding-top: 1rem; 
+            line-height: 1;
+        }
+
+        footer form input:focus,
+        footer form textarea:focus,
+        footer form select:focus {
+            outline: none; /* Remove the default focus outline */
+            /* Additional styles as needed */
+        }
+
+        footer form  input[type="text"],
+        footer form  textarea,
+        footer form  select,
+        footer form  option {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: normal; 
+        }
+
+        footer button{
+            padding: 1% 2%;
+            display: inline-block;
+            margin: 1%;
+            color: black;
+            background-color: transparent;
+            border: 1px solid black;
+            transition: 0.7s all;
+            font-size: 1.5rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        footer button:hover{
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+
+        }
+
+
+
+
+
+/* Mobile Menu */
+
+        .hamburger a{
+            font-size: 2rem;
+            font-weight: 200;
+            position: relative;
+            /* top: 1rem;
+            right: 1rem; */
+            z-index: 101;
+            transition: 0.7s all;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            padding: 1%;
+        }
+
+
+        .hamburger a:hover{
+            color: white; 
+            background-color: black;
+        }
+
+        
+
+        .menu-div{
+            display: none;
+        }
+    .menu{
+        background-color: #f2f2f2;
+        /* display: none;  */
+        padding: 2% !important;
+        padding-top: 3% !important;
+        position: fixed; 
+        z-index: 90;
+        top: 0;
+        right: 0;
+        height: 80vh;
+        width: 100%;
+
+    }
+
+    /* .menu .bg-image{
+        
+    } */
+
+    .menu-image img{
+        /* height: 25rem;  */
+        width: 60%;
+    }
+
+
+    .menu h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: #343a40;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .menu-items{
+        margin-top: 1rem;
+    }
+    .menu-items a {
+        text-decoration: none;
+        text-align: left;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        display: block;
+        margin: 1%;
+
+        padding: 1%;
+        transition: 0.7s all
+    }
+
+
+
+    .menu-items a:hover{
+        border-bottom: 0.8px solid black;
+    }
+
+    .menu-items p {
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-align: left;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        display: block;
+        margin: 1%;
+        padding: 1%;
+        transition: 0.7s all
+    }
+
+    .menu .logo img{
+        width: 20%;
+    }
+
+    .menu .social-icons a,
+    footer .social-icons a{
+        display: inline-block;
+        margin: 1%;
+        padding: 1%;
+        font-size: 2rem;
+        transition: 0.7s;
+        color: black;
+    }
+
+    .menu .social-icons a:hover,
+    footer .social-icons a:hover{
+        font-size: 2.2rem;
+        color: #777777
+    }
+
+    footer .social-icons{
+        display: flex;
+        padding-left: 5%;
+        /* padding-top: 2%; */
+        margin-top: 1%;
+    }
+
+
+/* Mobile Styles */
+
+.tablet-show .social-icons{
+    display: none !important;
+}
+
+.xs-mob-show, .mob-show, .tabelet-show, .large-show{
+  display: none; 
+}
+
+  @media(min-width:1920px){
+  .large-hide { display: none; }
+  .large-show { display: block; }
+
+  }
+
+  /* -md */
+  @media(max-width: 1024px){
+
+
+  }
+
+  @media(max-width: 990px){
+
+
+
+  }
+
+  @media(max-width: 850px){
+
+    .menu .logo img{
+        width: 40%;
+    }
+
+
+
+  }
+
+  /* -sm */
+  @media(max-width: 768px){
+  .tablet-hide { display: none; }
+  .tablet-show { display: block; }
+
+  .menu .logo img{
+        width: 50%;
+    }
+
+    .social-icons-tablet{
+        display: none !important;
+    }
+
+    footer .social-icons {
+    padding-left: 31%;
+}
+
+  }
+
+  @media(max-width: 660px){
+
+
+  }
+
+  /* -xs */
+  @media(max-width:576px){
+  .mob-hide { display: none; }
+  .mob-show { display: block; }
+
+  .menu .logo{
+        margin-top: 5rem;
+    }
+
+    footer form  input[type="text"],
+        footer form  textarea,
+        footer form  select,
+        footer form  option {
+            font-size: 1rem;
+        }
+
+        footer form input::placeholder,
+        footer form textarea::placeholder {
+            font-size: 1rem;
+        }
+
+        footer form input, 
+        footer form textarea,
+        footer form select{
+            width: 100%;
+            height: 2.5rem;
+        }
+  
+  }
+
+
+  @media(max-width: 450px){
+  .xs-mob-hide { display: none; }
+  .xs-mob-show { display: block; }
+  
+  
+  }
+
+  @media(max-width: 400px){
+
+
+  }
+
+  @media(max-width: 350px){
+
+
+  }
+    </style>
+
+    <header>
+        <div class = "grid">
+
+            <div class = "logo col-3_sm-6">
+                <a href = "/">
+                    <img src = "{{site.data.general.basics.logo_image}}">
+                </a>
+            </div>
+
+            <div class = "col-9_sm-6 navigation hamburger text-right">
+                <!-- <a>MENU</a> -->
+                <a>
+                    <span class="material-symbols-outlined">
+                        menu
+                        </span>
+                </a>
+            </div>
+
+        </div>
+
+
+        <section class = "grid menu-div">
+
+            <!-- MObile menu -->
+            <section class= " col-12 menu page-nav padded-sides-sm grid-center">
+                <div class = "exit col-12 grid-center">
+                    <!-- Logo and Image -->
+                <!-- <div class = "col-12">
+                    <div class = "logo text-center">
+                        <a href = "/">
+                            <img src = "{{site.data.navigation.header-navigation.logo}}">
+                        </a>
+                        
+                    </div>
+                    
+        
+                </div> -->
+        
+                <!-- Links -->
+                <div class = "col-12 grid-center">
+                    <div class = "col-4 menu-image text-center tablet-hide" >
+                        <img src = "{{site.data.navigation.header-navigation.image}}">
+                    </div>
+                    <!-- Nav 1 -->
+                    <div class = "col-4_sm-10">
+                        <h2>{{site.data.navigation.header-navigation.menu.heading}}</h2>
+                        <hr>
+                        <div class = "grid menu-items">
+                            <div class = "col-6 ">
+                                {{site.data.navigation.header-navigation.menu.links.column-1.textarea_html}}
+                            </div>
+                            <div class = "col-6 ">
+                                {{site.data.navigation.header-navigation.menu.links.column-2.textarea_html}}
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Nav 2 featured blogs-->
+        
+                    <div class = "col-4_sm-10">
+                        <h2>{{site.data.navigation.header-navigation.featured.heading}}</h2>
+                        <hr>
+                        <div class = "menu-items">
+                            {{site.data.navigation.header-navigation.featured.links.textarea_html}}
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+                <div class = "col-8-center social-icons text-center ">
+                    <a href = "mailto:{{site.data.navigation.social-links.links.email}}" target = "_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href = "{{site.data.navigation.social-links.links.instagram}}" target = "_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href = "{{site.data.navigation.social-links.links.whatsapp}}" target = "_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+        
+                </div>
+
+                </div>
+                
+        
+        
+            </section>
+
+        </section>
+        
+        
+
+        
+
+    </header>
+
+    
+
+
+    <!-- End of Header -->
+    {{content}}
+
+    {% for item in page.content-blocks %}
+    <div class="cms-editor-link" data-cms-editor-link="cloudcannon:#content-blocks[{{ forloop.index0 }}]">
+        <span class="cms-editor-button"></span>
+      {% include {{item._section-type}}.html %}
+    {% endfor %}
+
+    <!-- Footer -->
+    <footer class = "grid-center padded-sm" style = "background-color: #f2f2f2">
+        
+
+        <div class = "col-12-center padded-sides-sm">
+            <h2>{{site.data.navigation.footer-navigation.form.heading}}</h2>
+            <form method="post" action="/success.html">
+                <input type="text" id="name" name="name" placeholder="{{site.data.navigation.footer-navigation.form.field-1}}" required><br><br>
+            
+                <input type="email" id="email" name="email" placeholder="{{site.data.navigation.footer-navigation.form.field-2}}" required><br><br>
+            
+                <input type="tel" id="phone" name="phone" placeholder="{{site.data.navigation.footer-navigation.form.field-3}}" required><br><br>
+            
+                <textarea id="business-info" name="business_info" placeholder="{{site.data.navigation.footer-navigation.form.field-4}}" rows="4" cols="50" required></textarea><br><br>
+            
+                <div class="custom-select">
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected hidden>{{site.data.navigation.footer-navigation.form.field-5}}</option>
+                        <option value="{{site.data.navigation.footer-navigation.form.options.option-1}}">{{site.data.navigation.footer-navigation.form.options.option-1}}</option>
+                        <option value="{{site.data.navigation.footer-navigation.form.options.option-2}}">{{site.data.navigation.footer-navigation.form.options.option-2}}</option>
+                        <option value="{{site.data.navigation.footer-navigation.form.options.option-3}}">{{site.data.navigation.footer-navigation.form.options.option-3}}</option>
+                        <!-- Add more service options as needed -->
+                    </select>
+                    <div class="select-bg"></div>
+                </div>
+                <br><br>
+                <input type="hidden" name="inbox_key" value="contact_inbox">
+                <input type="hidden" name="_to" value="amanda.vongayi@outlook.com">
+                <button type="submit">{{site.data.navigation.footer-navigation.form.button}}</button>
+            </form>
+        </div>
+
+        <div class = "col-12_sm-10-center text-left ">
+            <div class = "social-icons">
+                <a href = "mailto:{{site.data.navigation.social-links.links.email}}" target = "_blank">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href = "{{site.data.navigation.social-links.links.instagram}}" target = "_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href = "{{site.data.navigation.social-links.links.whatsapp}}" target = "_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    
+
+    <!-- End of Footer -->
+
+    <!-- Bottom of website -->
+    <div class="grid-center text-center" style = "background-color: black; font-size: 0.7rem; font-family: 'Roboto', sans-serif; ">
+        <div class = "col-10-middle-center_sm-12">
+            <p class = "grid-center text-center"> 
+                <a href="/" class=" center col-4_sm-6_xs-12-center" style = "color: white;"> © {{site.data.general.basics.your-brand-name}}</a>
+                <a href="https://www.rielle.co" target = "_blank" class="center col-4_sm-6_xs-12-center" style = "color: white;"> Website by Rielle Digital Studio </a>
+              </p>
+        </div>
+        
+      </div>
+
+      <!-- Scripts -->
+
+      <!-- Iconify -->
+
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+      <!-- Jquery -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/main.js" type="text/javascript"></script>
+    <script src="/slick/slick.min.js"></script>
+</body>
+
+</html>

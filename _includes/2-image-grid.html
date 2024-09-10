@@ -1,0 +1,48 @@
+<style>
+
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}}
+    }
+    #content-blocks-{{forloop.index0}} [class*=col-5]{
+        flex-basis: 49%;
+        max-width: 49%;
+    }
+    #content-blocks-{{forloop.index0}} #image-1{
+        margin-right: 1%;
+        padding-bottom: 40rem;
+        background-image: url('{{item.1-background_image}}');
+        
+    }
+
+    #content-blocks-{{forloop.index0}} #image-2{
+        margin-left: 1%;
+        padding-bottom: 40rem;
+        background-image: url('{{item.2-background_image}}');
+    }
+
+
+    @media(max-width: 768px){
+        #content-blocks-{{forloop.index0}} [class*=col-5]{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #content-blocks-{{forloop.index0}}  .padded-sides-lg{
+        padding: 5%;
+    }
+
+    }
+
+</style>
+
+
+<section id="content-blocks-{{forloop.index0}}">
+        <section class = "padded-sides-lg grid-center" id = "{{item.content-block-id}}">
+            <div class = "bg-image col-5_sm-12" id = "image-1">
+    
+            </div>
+            <div class = "bg-image col-5 tablet-hide" id = "image-2">
+    
+            </div>
+        </section>
+</section>

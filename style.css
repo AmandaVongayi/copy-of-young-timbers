@@ -1,0 +1,316 @@
+
+
+/* To be Deleted */ 
+
+/* div, section, nav, header, footer {border: 1px solid red;}
+h3, h4, h5, h6 {border: 1px solid yellow;}
+h1, h2 {border: 1px solid grey;}
+p{border: 1px solid pink;}
+hr, img,a {border: 1px solid blue;} */
+
+/* General Code Starts here */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* make sure there is no overlap */
+[class*=grid-], 
+[class*=grid_], 
+[class~=grid] {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+}
+
+ /* this overrides the default padding and margin on gridlex elements */
+ [class*=grid] {   margin: 0;  }
+ [class*=col]  {   padding: 0; }
+
+
+ /* HTML Scroll */
+ html 
+  {
+  scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
+  overflow-x: hidden;
+  touch-action: manipulation;
+  }
+
+
+/* !!! Text Standard Styles !!! */
+
+body {
+    font-family: 'Roboto', sans-serif; 
+  }
+  h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+  h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+h5, h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+  
+h2, h3, h4, h5, h6 {
+      line-height: 1.1;
+      margin-bottom: 1rem;
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;
+    line-height: 1.1; 
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  p:last-child{
+    margin-bottom: 1.5rem;
+  }
+  
+  a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.7s all;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+  
+  h2:last-child, 
+  h3:last-child, 
+  h4:last-child, 
+  h5:last-child, 
+  h6:last-child, 
+  p:last-child {
+      margin-bottom: 0;
+  }
+
+
+/* Padding annd Margin Standard Styles */
+
+/* Padding Utility Classes */
+
+.padded-xsm { padding: 1.5%; }
+.padded-sm { padding: 2.5%; }
+.padded    { padding: 5%;   }
+.padded-lg { padding: 10%;  }
+
+.padded-sides-sm {padding: 0% 2.5%;}
+.padded-sides {padding: 0% 5%;}
+.padded-sides-lg {padding: 0% 10%;}
+.padded-sides-xlg {padding: 0% 15%;}
+
+.padded-05 { padding: 0.5rem; }
+.padded-1  { padding: 1rem; }
+.padded-2  { padding: 2rem; }
+
+.padded-t-sm  { padding-top: 2.5%; }
+.padded-b-sm  { padding-bottom: 2.5%; }
+.padded-l-sm  { padding-left: 2.5%; }
+.padded-r-sm  { padding-right: 2.5%; }
+
+.padded-t  { padding-top: 5%; }
+.padded-b  { padding-bottom: 5%; }
+.padded-l  { padding-left: 5%; }
+.padded-r  { padding-right: 5%; }
+
+.padded-t-lg  { padding-top: 10%; }
+.padded-b-lg  { padding-bottom: 10%; }
+.padded-l-lg  { padding-left: 10%; }
+.padded-r-lg  { padding-right: 10%; }
+
+.padded-t-xlg  { padding-top: 15%; }
+.padded-b-xlg  { padding-bottom: 15%; }
+.padded-l-xlg  { padding-left: 15%; }
+.padded-r-xlg  { padding-right: 15%; }
+
+.padded-tb  { padding-top: 5%; padding-bottom: 5%; }
+.padded-lr  { padding-left: 5%; padding-right: 5%; }
+
+.padded-t-1 { padding-top: 1rem; }
+.padded-b-1 { padding-bottom: 1rem; }
+.padded-l-1 { padding-left: 1rem; }
+.padded-r-1 { padding-right: 1rem; }
+
+.padded-t-2 { padding-top: 2rem; }
+.padded-b-2 { padding-bottom: 2rem; }
+.padded-l-2 { padding-left: 2rem; }
+.padded-r-2 { padding-right: 2rem; }
+
+.padded-t-0 { padding-top: 0; }
+.padded-b-0 { padding-bottom: 0; }
+.padded-l-0 { padding-left: 0; }
+.padded-r-0 { padding-right: 0; }
+
+/* Margin Utility Classes */ 
+
+.margin-t-sm { margin-top: 2.5%; }
+.margin-b-sm { margin-bottom: 2.5%; }
+.margin-l-sm { margin-left: 2.5%; }
+.margin-r-sm { margin-right: 2.5%; }
+
+.margin-t { margin-top: 5%; }
+.margin-b { margin-bottom: 5%; }
+.margin-l { margin-left: 5%; }
+.margin-r { margin-right: 5%; }
+
+.margin-t-lg { margin-top: 10%; }
+.margin-b-lg { margin-bottom: 10%; }
+.margin-l-lg { margin-left: 10%; }
+.margin-r-lg { margin-right: 10%; }
+
+.margin-t-xlg { margin-top: 15%; }
+.margin-b-xlg { margin-bottom: 15%; }
+.margin-l-xlg { margin-left: 15%; }
+.margin-r-xlg { margin-right: 15%; }
+
+.margin-t-1 { margin-top: 1rem; }
+.margin-b-1 { margin-bottom: 1rem; }
+.margin-l-1 { margin-left: 1rem; }
+.margin-r-1 { margin-right: 1rem; }
+
+.margin-t-2 { margin-top: 2rem; }
+.margin-b-2 { margin-bottom: 2rem; }
+.margin-l-2 { margin-left: 2rem; }
+.margin-r-2 { margin-right: 2rem; }
+
+.margin-t-0 { margin-top: 0; }
+.margin-b-0 { margin-bottom: 0; }
+.margin-l-0 { margin-left: 0; }
+.margin-r-0 { margin-right: 0; }
+
+.margin-tb { margin-top: 5%; margin-bottom: 5%; }
+.margin-lr { margin-left: 5%; margin-right: 5%; }
+.margin-lr-sm { margin-left: 2%; margin-right: 2%; }
+
+
+/* Typography standard styles */
+
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
+
+.left    { text-align: left; }
+.right   { text-align: right; }
+.center  { text-align: center; }
+
+
+/* Background */
+
+.bg-image{
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.temporary-bg{
+    background-image: url('/images/placeholder.jpg');
+    padding-bottom: 10%;
+}
+
+.temporary-bg-2{
+    background-image: url('/images/placeholder-2.jpg');
+    padding-bottom: 10%;
+}
+
+.temporary-bg-3{
+    background-image: url('/images/placeholder.jpg');
+    padding-bottom: 40%;
+}
+
+.temporary-bg-4{
+    background-image: url('/images/placeholder-2.jpg');
+    padding-bottom: 40%;
+}
+
+.temporary-bg-5{
+    background-image: url('/images/placeholder.jpg');
+    padding-bottom: 30%;
+}
+
+.temporary-bg-6{
+    background-image: url('/images/placeholder-2.jpg');
+    padding-bottom: 30%;
+}
+
+
+/* Blogs Styles */
+
+
+
+
+    /* Mobile Styles */
+
+    .xs-mob-show, .mob-show, .tabelet-show, .large-show{
+      display: none; 
+    }
+  
+      @media(min-width:1920px){
+      .large-hide { display: none; }
+      .large-show { display: block; }
+  
+      }
+  
+      /* -md */
+      @media(max-width: 1024px){
+  
+  
+      }
+  
+      @media(max-width: 990px){
+
+  
+  
+      }
+  
+      @media(max-width: 850px){
+        p{font-size: 1rem;}
+  
+  
+      }
+  
+      /* -sm */
+      @media(max-width: 768px){
+      .tablet-hide { display: none; }
+      .tablet-show { display: block; }
+  
+      }
+  
+      @media(max-width: 660px){
+  
+  
+      }
+  
+      /* -xs */
+      @media(max-width:550px){
+      .mob-hide { display: none; }
+      .mob-show { display: block; }
+      
+      }
+  
+  
+      @media(max-width: 450px){
+      .xs-mob-hide { display: none; }
+      .xs-mob-show { display: block; }
+      
+      
+      }
+  
+      @media(max-width: 400px){
+  
+  
+      }
+  
+      @media(max-width: 350px){
+  
+  
+      }

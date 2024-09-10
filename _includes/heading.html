@@ -1,0 +1,109 @@
+<style>
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}};
+    }
+
+    #content-blocks-{{forloop.index0}} p
+    {
+    color: {{item.colors.text-color}};
+    }
+
+        
+    #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 6rem;
+        font-weight: 700;
+        color: {{item.colors.heading-color}};
+        }
+/* Mobile Styles */
+
+.xs-mob-show, .mob-show, .tabelet-show, .large-show{
+  display: none; 
+}
+
+  @media(min-width:1920px){
+  .large-hide { display: none; }
+  .large-show { display: block; }
+
+  }
+
+  /* -md */
+  @media(max-width: 1024px){
+
+    #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 5rem;
+        }
+
+
+  }
+
+  @media(max-width: 990px){
+
+
+
+  }
+
+  @media(max-width: 850px){
+
+    #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 4rem;
+        }
+
+  }
+
+  /* -sm */
+  @media(max-width: 768px){
+  .tablet-hide { display: none; }
+  .tablet-show { display: block; }
+
+  }
+
+  @media(max-width: 660px){
+
+    #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 3rem;
+        }
+
+  }
+
+  /* -xs */
+  @media(max-width:576px){
+  .mob-hide { display: none; }
+  .mob-show { display: block; }
+
+  #content-blocks-{{forloop.index0}} h1 
+        {
+        font-size: 2rem;
+        }
+
+  
+  }
+
+
+  @media(max-width: 450px){
+  .xs-mob-hide { display: none; }
+  .xs-mob-show { display: block; }
+  
+  
+  }
+
+  @media(max-width: 400px){
+
+
+  }
+
+  @media(max-width: 350px){
+
+
+  }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "padded-sides-lg" id = "{{item.content-block-id}}">
+        <h1>{{item.textarea_html}}</h1>
+    </section>
+</section>

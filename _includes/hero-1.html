@@ -1,0 +1,184 @@
+<style>
+
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}};
+    }
+
+
+
+    #content-blocks-{{forloop.index0}} .bg-image{
+        background-image: url('{{item.image}}');
+        padding-bottom: 40rem;
+
+    }
+
+
+
+    
+
+    #content-blocks-{{forloop.index0}} .hero-heading h1{
+        
+        /* margin-top: -45%;
+        margin-right: -20%; */
+        font-size: 5rem;
+        line-height: 0.9;
+        z-index: 10;
+        font-weight: 500;
+        color: {{item.colors.heading}};
+    }
+    #content-blocks-{{forloop.index0}} .hero-text{
+        
+        font-size: 1.4rem;
+        /* margin-top: -10%; */
+        z-index: 10;
+        background-color: #000000;
+        padding: 5% 15% 5% 5% !important;
+        color: {{item.colors.text}};
+        
+        
+    }
+
+    /* Mobile Styles */
+
+    .xs-mob-show, .mob-show, .tabelet-show, .large-show{
+    display: none; 
+  }
+
+    @media(min-width:1920px){
+    .large-hide { display: none; }
+    .large-show { display: block; }
+
+
+    }
+
+    /* -md */
+    @media(max-width: 1024px){
+
+        #content-blocks-{{forloop.index0}} .hero-heading h1 {
+        font-size: 4rem;
+
+        }
+    }
+
+    @media(max-width: 990px){
+
+
+    }
+
+    @media(max-width: 850px){
+
+
+    }
+
+    /* -sm */
+    @media(max-width: 768px){
+    .tablet-hide { display: none; }
+    .tablet-show { display: block; }
+
+    #content-blocks-{{forloop.index0}} .hero-heading h1 {
+        font-size: 3rem;
+
+        }
+        #content-blocks-{{forloop.index0}} .bg-image {
+            padding-bottom: 27rem;
+        }
+
+        #content-blocks-{{forloop.index0}} .hero-text {
+            padding: 5% 8% 5% 5% !important;
+        }
+
+
+    }
+
+    @media(max-width: 660px){
+
+        #content-blocks-{{forloop.index0}} .bg-image {
+            padding-bottom: 20rem;
+        }
+        #content-blocks-{{forloop.index0}} .hero-heading h1 {
+        font-size: 2.5rem;}
+
+
+
+    }
+
+    /* -xs */
+    @media(max-width:576px){
+    .mob-hide { display: none; }
+    .mob-show { display: block; }
+
+    #content-blocks-{{forloop.index0}} .hero-heading h1 {
+        padding-right: 25%;
+        margin-top: 2rem;
+        margin-left: -5rem;
+        }
+        #content-blocks-{{forloop.index0}} .hero-text {
+                margin-bottom: 2rem;
+                margin-top: -5rem;
+                margin-left: -7rem;
+            }
+
+    }
+
+
+    @media(max-width: 450px){
+    .xs-mob-hide { display: none; }
+    .xs-mob-show { display: block; }
+    
+    
+    }
+
+    @media(max-width: 400px){
+
+        #content-blocks-{{forloop.index0}} .hero-heading h1 {
+            padding-right: 0%;
+        margin-left: -3rem;
+        }
+        #content-blocks-{{forloop.index0}} .hero-text {
+
+                margin-left: -3rem;
+            }
+
+
+    }
+
+    @media(max-width: 350px){
+
+
+    }
+</style>
+
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-center padded-sides" id = "{{item.content-block-id}}">
+
+        <div class = "col-5-bottom_md-6_xs-8">
+            
+            <div class = "hero-heading padded-xsm">
+                <h1>
+                   {{item.heading}}
+                </h1>
+            </div>
+            <div class = "hero-text mob-hide">
+  
+                    {{item.textarea_html}}
+  
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class = "col-4_md-5_xs-11">
+                <div class = " bg-image">
+                </div>
+            
+        </div>
+        <div class = "col-10 hero-text mob-show">
+  
+            {{item.textarea_html}}
+
+        </div>
+
+        
+        
+    </section>
+</section>

@@ -1,0 +1,131 @@
+<style> 
+
+    #content-blocks-{{forloop.index0}} {
+        background-color: {{item.colors.background-color}}
+    }
+    #content-blocks-{{forloop.index0}} h1{
+        font-size: 3rem;
+        color: {{item.colors.heading}}
+    }
+
+    #content-blocks-{{forloop.index0}} p{
+        font-size: 1.2rem;
+        color: {{item.colors.text}}
+    }
+
+    #content-blocks-{{forloop.index0}} .top-text{
+        padding: 2% 2% 2% 2%;
+    }
+    #content-blocks-{{forloop.index0}} .bottom-text{
+        padding: 2% 2% 2% 2%;
+    }
+
+    /* Mobile Styles */
+
+.xs-mob-show, .mob-show, .tabelet-show, .large-show{
+  display: none; 
+}
+
+  @media(min-width:1920px){
+  .large-hide { display: none; }
+  .large-show { display: block; }
+
+  }
+
+  /* -md */
+  @media(max-width: 1024px){
+
+
+  }
+
+  @media(max-width: 990px){
+
+
+
+  }
+
+  @media(max-width: 850px){
+
+
+
+  }
+
+  /* -sm */
+  @media(max-width: 768px){
+  .tablet-hide { display: none; }
+  .tablet-show { display: block; }
+
+  #content-blocks-{{forloop.index0}} h1{
+        font-size: 2.5rem;
+    }
+
+  }
+
+  @media(max-width: 660px){
+
+    #content-blocks-{{forloop.index0}} h1{
+        font-size: 2.5rem;
+    }
+
+
+  }
+
+  /* -xs */
+  @media(max-width:576px){
+  .mob-hide { display: none; }
+  .mob-show { display: block; }
+
+  #content-blocks-{{forloop.index0}} .top-heading{
+    text-align: right;
+    margin-left: -15%;
+  }
+
+  
+  }
+
+
+  @media(max-width: 450px){
+  .xs-mob-hide { display: none; }
+  .xs-mob-show { display: block; }
+  
+  
+  }
+
+  @media(max-width: 400px){
+
+
+  }
+
+  @media(max-width: 350px){
+
+
+  }
+    
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+    <section class = "grid-center background-color" id = "{{item.content-block-id}}">
+        <div class = "col-11_xs-11 grid-middle-center padded-sm">
+            <div class = "col-3-bottom_xs-12 top-heading">
+                
+                <h1>{{item.headings.heading-1}}</h1>
+            </div>
+            <div class = "col-6_sm-8_xs-12 top-text">
+                {{item.texts.block-1.textarea_html}}
+            </div>
+        </div>
+        <div class = "col-11 grid-middle-center padded-sm" style = "margin-top: 5%;">
+            <div class = "col-3-bottom_xs-12 mob-show">
+                <h1>{{item.headings.heading-2}}</h1>
+            </div>
+            <div class = "col-6_sm-8_xs-12 bottom-text">
+                {{item.texts.block-2.textarea_html}}
+                
+            </div>
+            <div class = "col-3-bottom mob-hide">
+                <h1>{{item.headings.heading-2}}</h1>
+            </div>
+        </div>
+        
+    </section>
+</section>

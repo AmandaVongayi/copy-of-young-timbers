@@ -1,0 +1,28 @@
+--- 
+layout: blog-categories 
+category-heading: All Blogs
+--- 
+
+<section class="padded-sides grid-center">
+    <div class="blog-loop blog-masonry padded-1">
+      {% for post in site.posts %}
+      <div class="masonry-item ">
+        <a class="padded " href="{{post.url}}">
+          <div class="hover-container bg-image" style="background-image:url('{{post.blog_image}}'); min-height: 40vh;">
+            <div class="blog-hover-overlay">
+              <div class="hover-inner center">
+                <h5> {{post.cta}} </h5>
+              </div>
+            </div>
+          </div>
+          <div class="bump left">
+            <h3 class="no-margin"> {{post.title}} </h3>
+            <p>{{post.blog-summary}}</p>
+            <p>{{post.symbols}}</p>
+            <p class="date">{{post.author}}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
